@@ -1,21 +1,15 @@
-<h1 id='hddG'></h1>
-<h1 id='hddH'></h1>
+<head>
+    <script src='http://pv.sohu.com/cityjson?ie=utf-8'></script>
+</head>
+<a id='link-hddG' href=''></a>
+<br />
+<a id='link-hddH' href=''></a>
 <script>
-    while (true) {
-        setInterval(function () {
-            let http = new XMLHttpRequest();
-            const url = 'https://api.ipify.org/?format=json&callback=';
-            http.open("GET", url);
-            http.send();
-            http.onreadystatechange(
-                function () {
-                    if (http.readyState == 4 && http.status == 200) {
-                        document.getElementById('hddG').innerHTML = 'http://' + http.response.ip.toString() + ':88';
-                        document.getElementById('hddH').innerHTML = 'http://' + http.response.ip.toString() + ':89';
-                    }
-                }
-            );
-        }, 500);
-    }
-
+    window.onload = function () {
+        var ip = 'http://' + returnCitySN.cip;
+        document.getElementById('link-hddG').setAttribute('href', ip + ':88');
+        document.getElementById('link-hddG').innerHTML = ip + ':88';
+        document.getElementById('link-hddH').setAttribute('href', ip + ':89');
+        document.getElementById('link-hddH').innerHTML = ip + ':89';
+    };
 </script>
