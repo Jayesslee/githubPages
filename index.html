@@ -1,15 +1,26 @@
 <head>
-    <script src='http://pv.sohu.com/cityjson?ie=utf-8'></script>
+    <script src='https://pv.sohu.com/cityjson?ie=utf-8'></script>
 </head>
-<a id='link-hddG' href=''></a>
-<br />
-<a id='link-hddH' href=''></a>
+
+<div id="111">
+    <div id="222">ggg</div>
+</div>
+
+<a id='link-hddG' href=''>
+    <h3 id='text-hddG'></h3>
+</a>
+<a id='link-hddH' href=''>
+    <h3 id='text-hddH'></h3>
+</a>
 <script>
     window.onload = function () {
-        var ip = 'http://' + returnCitySN.cip;
-        document.getElementById('link-hddG').setAttribute('href', ip + ':88');
-        document.getElementById('link-hddG').innerHTML = ip + ':88';
-        document.getElementById('link-hddH').setAttribute('href', ip + ':89');
-        document.getElementById('link-hddH').innerHTML = ip + ':89';
+
+      console.log(document.getElementById('222').innerHTML);
+
+        var ip = returnCitySN.cip;
+        document.getElementById('link-hddG').setAttribute = 'http://' + ip + ':88';
+        // document.getElementById('text-hddG').innerHTML = 'http://' + ip + ':88';
+        document.getElementById('link-hddH').innerHTML = 'http://' + ip + ':89';
+        // document.getElementById('text-hddH').innerHTML = 'http://' + ip + ':89';
     };
 </script>
