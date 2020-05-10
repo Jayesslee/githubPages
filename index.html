@@ -1,4 +1,21 @@
-<div>test</div>
+<h1 id='hddG'></h1>
+<h1 id='hddH'></h1>
 <script>
-    alert('123111');
+    while (true) {
+        setInterval(function () {
+            let http = new XMLHttpRequest();
+            const url = 'https://api.ipify.org/?format=json&callback=';
+            http.open("GET", url);
+            http.send();
+            http.onreadystatechange(
+                function () {
+                    if (http.readyState == 4 && http.status == 200) {
+                        document.getElementById('hddG').innerHTML = 'http://' + http.response.ip.toString() + ':88';
+                        document.getElementById('hddH').innerHTML = 'http://' + http.response.ip.toString() + ':89';
+                    }
+                }
+            );
+        }, 500);
+    }
+
 </script>
